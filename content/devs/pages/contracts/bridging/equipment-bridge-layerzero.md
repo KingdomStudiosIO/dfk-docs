@@ -58,4 +58,4 @@ interface IEquipmentBridgeLZ {
 
 ### ABIs
 
-{% file src="/files/JULN7X7OLoQaGwUIGRHQ" %}
+{% file src="/assets/devs/files/EquipmentBridgeLZDiamond.json" %}

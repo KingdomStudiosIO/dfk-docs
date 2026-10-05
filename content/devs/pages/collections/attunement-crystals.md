@@ -87,7 +87,7 @@ interface IAttunementCrystal {
 
 ### ABIs
 
-{% file src="/files/HRr1PSXk1BHD5BhMLIIt" %}
+{% file src="/assets/devs/files/AttunementCrystal.json" %}
 
 ## Historical Contracts
 

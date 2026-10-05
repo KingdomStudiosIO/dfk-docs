@@ -85,7 +85,7 @@ The contract addresses did not change during this upgrade.
 
 ### ABIs
 
-{% file src="/files/qyrtM4v41yHML1pYf6ba" %}
+{% file src="/assets/devs/files/PetCoreDiamond.json" %}
 
 ## Historical Contracts
 
@@ -139,7 +139,7 @@ interface IPetCore {
 
 ### ABIs
 
-{% file src="/files/nijYuQpDTEHDbA5ScMa5" %}
+{% file src="/assets/devs/files/PetCore.json" %}
 
 ## Data Tables
 
@@ -188,11 +188,11 @@ Use these tables to parse the blockchain and API Pet data.
 
 #### Appearance / Family / Variant
 
-{% file src="/files/Fw98y2STi594t6UBZ7fc" %}
+{% file src="/assets/devs/files/blueEggData.json" %}
 
-{% file src="/files/gHLansDD63cZLruTjbH3" %}
+{% file src="/assets/devs/files/greenEggData.json" %}
 
-{% file src="/files/lGNmlqvxoUPkgX2SflP9" %}
+{% file src="/assets/devs/files/greyEggData.json" %}
 
 #### Background
 
@@ -395,11 +395,11 @@ Note that in the API, these values are padded by `10000 * element`.
 
 #### Pet Descriptions
 
-{% file src="/files/7cSaVVINCNxrIVf41yWR" %}
+{% file src="/assets/devs/files/petDescriptions.json" %}
 
 #### Pet Rarity Descriptors
 
-{% file src="/files/nBgapj0DYEAPsaYFwAMI" %}
+{% file src="/assets/devs/files/petRarityDescriptors.json" %}
 
 ## Related Contracts
 

@@ -87,9 +87,9 @@ interface IBanker {
 
 ### ABIs
 
-{% file src="/files/rXAo4Lmzj69CZflTHOdB" %}
+{% file src="/assets/devs/files/Bank.json" %}
 
-{% file src="/files/xvPKqAJtqhAsQyZscUFx" %}
+{% file src="/assets/devs/files/Banker.json" %}
 
 ## Related Contracts
 

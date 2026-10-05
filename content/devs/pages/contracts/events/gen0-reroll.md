@@ -65,7 +65,7 @@ interface IGen0Reroll {
 
 ### ABIs
 
-{% file src="/files/HUSTEnNCcbCIqbjPzSyR" %}
+{% file src="/assets/devs/files/Gen0RerollUpgradeable.json" %}
 
 ## Historical Contracts
 

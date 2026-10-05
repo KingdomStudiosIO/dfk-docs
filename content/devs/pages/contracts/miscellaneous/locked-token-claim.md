@@ -42,4 +42,4 @@ interface ILockedTokenClaim {
 
 ### ABIs
 
-{% file src="/files/m6fyT3EIeWAyn0GSVg3Y" %}
+{% file src="/assets/devs/files/LockedTokenClaim.json" %}

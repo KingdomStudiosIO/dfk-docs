@@ -60,7 +60,7 @@ interface IAtonementCrystal {
 
 ### ABIs
 
-{% file src="/files/6rUOOqtNqvFVtH5BMN5d" %}
+{% file src="/assets/devs/files/AtonementCrystal.json" %}
 
 ## Historical Contracts
 

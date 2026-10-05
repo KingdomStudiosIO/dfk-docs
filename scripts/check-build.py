@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Verify a finished `next build`: every live GitBook URL is present, and no page has a
-dead internal link, a missing local asset, or leftover GitBook markup.
+"""Check a finished build for missing pages, dead links, missing assets and leftover GitBook tags.
 
 usage: SITE=docs|devs python3 scripts/check-build.py [--offline]
 
@@ -23,7 +22,7 @@ problems = []
 if "--offline" in sys.argv:
     live = set(pages)
 else:
-    # GitBook served sitemap-pages.xml; this site serves sitemap.xml.
+    # Try the old sitemap name first, then the current one.
     live = set()
     for name in ("sitemap-pages.xml", "sitemap.xml"):
         try:

@@ -182,7 +182,7 @@ interface IPowerUpManager {
 
 ### ABIs
 
-{% file src="/files/2ML78tDb8t0BPUnbOL8z" %}
+{% file src="/assets/devs/files/PowerUpManagerDiamond.json" %}
 
 ## Related Contracts
 

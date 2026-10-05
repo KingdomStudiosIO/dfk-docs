@@ -38,7 +38,7 @@ interface IGraveyard {
 
 ### ABIs
 
-{% file src="/files/TvZnZcj1W1e7pLnf4wik" %}
+{% file src="/assets/devs/files/Graveyard.json" %}
 
 ## Historical Contracts
 

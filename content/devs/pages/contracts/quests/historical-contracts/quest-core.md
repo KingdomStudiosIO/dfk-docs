@@ -160,12 +160,12 @@ interface IQuestCoreV1 {
 
 ### ABIs
 
-{% file src="/files/yxQyA2bqfFxUySgkBpQf" %}
+{% file src="/assets/devs/files/QuestCoreUpgradeable.json" %}
 
-{% file src="/files/DtuWx0HYN1ag1LUJyQiq" %}
+{% file src="/assets/devs/files/QuestCoreV2.2.json" %}
 
-{% file src="/files/2bfzhJU93hyI9kwKdZlA" %}
+{% file src="/assets/devs/files/QuestCoreV2.1.json" %}
 
-{% file src="/files/qtabX8IBq3PewQgK8vzH" %}
+{% file src="/assets/devs/files/QuestCore.json" %}
 
-{% file src="/files/NeJpFVGy9uxbMjCG2I7a" %}
+{% file src="/assets/devs/files/QuestCoreV1.json" %}

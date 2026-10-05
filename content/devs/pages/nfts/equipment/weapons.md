@@ -57,9 +57,9 @@ interface IWeaponCoreDiamond {
 
 ### ABI
 
-{% file src="/files/9C2vzwhE0m4qGHWLmol2" %}
+{% file src="/assets/devs/files/WeaponCoreDiamond.json" %}
 
-{% file src="/files/vx3Loli2HagJyCHZYaUO" %}
+{% file src="/assets/devs/files/WeaponCoreDiamond-minified.json" %}
 
 ## Types
 

@@ -45,4 +45,4 @@ interface IGen0Sale {
 
 ### ABIs
 
-{% file src="/files/7mlthL9delYSWvi7acnR" %}
+{% file src="/assets/devs/files/Gen0Sale.json" %}

@@ -29,4 +29,4 @@ interface IPotionMigrator {
 
 ### ABIs
 
-{% file src="/files/NSiFGelF8dHbVHeLle4X" %}
+{% file src="/assets/devs/files/PotionMigrator.json" %}

@@ -107,4 +107,4 @@ interface IValidatorFund {
 
 ### ABIs
 
-{% file src="/files/2yycXKye4XVd6fQvsguF" %}
+{% file src="/assets/devs/files/validatorFund.json" %}

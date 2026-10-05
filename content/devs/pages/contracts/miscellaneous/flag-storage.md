@@ -58,7 +58,7 @@ interface IFlagStorageV2 {
 
 ### ABIs
 
-{% file src="/files/gVpIHDe9GN00XjgmUrdV" %}
+{% file src="/assets/devs/files/FlagStorageDiamond.json" %}
 
 ## Historical Contracts
 
@@ -105,7 +105,7 @@ interface IFlagStorageV1 {
 
 ### ABIs
 
-{% file src="/files/qpJEXzBqvxxWL4GohFXO" %}
+{% file src="/assets/devs/files/FlagStorage.json" %}
 
 ### FlagStorageV1
 

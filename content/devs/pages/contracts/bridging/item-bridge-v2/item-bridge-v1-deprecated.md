@@ -63,4 +63,4 @@ interface IItemBridge {
 
 ### ABIs
 
-{% file src="/files/lfgqX6FkLBo6Fn8FzoyH" %}
+{% file src="/assets/devs/files/ItemBridge.json" %}

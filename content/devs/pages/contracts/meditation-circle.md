@@ -110,7 +110,7 @@ interface IMeditationCircle {
 
 ### ABIs
 
-{% file src="/files/FaXNAb9YNmpNDSweypPf" %}
+{% file src="/assets/devs/files/MeditationCircleDiamond.json" %}
 
 ## Historical Contracts
 
@@ -154,4 +154,4 @@ interface IMeditationCircle {
 
 ### ABIs
 
-{% file src="/files/P1W4slaAeQPgHWwvzpwz" %}
+{% file src="/assets/devs/files/MeditationCircle.json" %}

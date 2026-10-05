@@ -44,4 +44,4 @@ interface ITearBridge {
 
 ### ABIs
 
-{% file src="/files/BqYjIioOdqRwCQfSRGkH" %}
+{% file src="/assets/devs/files/tearBridge.json" %}

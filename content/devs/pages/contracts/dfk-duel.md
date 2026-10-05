@@ -135,9 +135,9 @@ interface IDuelRankClaim {
 
 ### ABIs
 
-{% file src="/files/PT7aqOSTosDG62ZQghcK" %}
+{% file src="/assets/devs/files/DuelS6Diamond.json" %}
 
-{% file src="/files/jPx5HDqYERLMTXCZFOA2" %}
+{% file src="/assets/devs/files/DuelRankClaim.json" %}
 
 ## Related Contracts
 

@@ -57,7 +57,7 @@ interface IEternalStory {
 
 ### ABIs
 
-{% file src="/files/8cXo99BuxOlYGAGDQqpu" %}
+{% file src="/assets/devs/files/EternalStory.json" %}
 
 ## Historical Contracts
 

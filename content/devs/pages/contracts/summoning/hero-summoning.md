@@ -77,9 +77,9 @@ interface ICrystalCore {
 
 ### ABIs
 
-{% file src="/files/oOBlnTV31sUim526dfYp" %}
+{% file src="/assets/devs/files/HeroSummoningUpgradeable.json" %}
 
-{% file src="/files/vWfU6bPF9UbiFKs8p3CU" %}
+{% file src="/assets/devs/files/CrystalCoreDiamond.json" %}
 
 ## Historical Contracts
 
@@ -139,4 +139,4 @@ interface IHeroSummoningUpgradeable {
 
 ### ABIs
 
-{% file src="/files/AtUK0ykB5PJ3R3m9Qo1E" %}
+{% file src="/assets/devs/files/historical/HeroSummoningUpgradeable.json" %}

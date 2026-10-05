@@ -72,8 +72,8 @@ interface IEquipmentAuction {
 
 ### ABIs
 
-{% file src="/files/3rwQ2G9FOjtPNHckwbz7" %}
+{% file src="/assets/devs/files/WeaponAuctionUpgradeable.json" %}
 
-{% file src="/files/MxyveKrEDx16yPS2rPwf" %}
+{% file src="/assets/devs/files/ArmorAuctionUpgradeable.json" %}
 
-{% file src="/files/PD9OpQVjmB2F0rzkWF1k" %}
+{% file src="/assets/devs/files/AccessoryAuctionUpgradeable.json" %}

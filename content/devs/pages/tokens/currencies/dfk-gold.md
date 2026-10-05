@@ -68,7 +68,7 @@ interface IInventoryItem {
 
 ### ABIs
 
-{% file src="/files/a1WUZVAHA5MNWuVe4aEw" %}
+{% file src="/assets/devs/files/DfkGold.json" %}
 
 ## Historical Contracts
 

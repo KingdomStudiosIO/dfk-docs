@@ -50,7 +50,7 @@ interface IPetAuction {
 
 ### ABIs
 
-{% file src="/files/jV9RXR2vqYBNOA3K3E8F" %}
+{% file src="/assets/devs/files/PetAuctionUpgradeable.json" %}
 
 ## Historical Contracts
 

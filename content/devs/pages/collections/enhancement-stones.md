@@ -88,7 +88,7 @@ interface IEnhancementStone {
 
 ### ABIs
 
-{% file src="/files/uSZbXOryyOMZ4dxRlRId" %}
+{% file src="/assets/devs/files/EnhancementStone.json" %}
 
 ## Historical Contracts
 

@@ -58,4 +58,4 @@ interface ITokenDisburse {
 
 ### ABIs
 
-{% file src="/files/PeBACWKpn9wN87CW1mrp" %}
+{% file src="/assets/devs/files/TokenDisburse.json" %}

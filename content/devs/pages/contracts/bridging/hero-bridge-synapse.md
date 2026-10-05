@@ -49,4 +49,4 @@ interface IHeroBridge {
 
 ### ABIs
 
-{% file src="/files/W7BbIlYYXvmu9Un6Ym1P" %}
+{% file src="/assets/devs/files/HeroBridgeUpgradeable.json" %}

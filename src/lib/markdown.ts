@@ -20,7 +20,7 @@ export type RenderedPage = {
   html: string;
   headings: Heading[];
   description?: string;
-  /** Plain text of the page body, for the search index. */
+  /** Body text for the search index. */
   text: string;
 };
 
@@ -34,12 +34,6 @@ function attr(tag: string, name: string) {
   return tag.match(new RegExp(`${name}="([^"]*)"`))?.[1];
 }
 
-let fileMap: Record<string, { name: string; path: string }> | undefined;
-function devsFile(id: string) {
-  fileMap ??= JSON.parse(fs.readFileSync(path.join(CONTENT_DIR, "file-map.json"), "utf8"));
-  return fileMap![id];
-}
-
 function embed(url: string) {
   const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]{6,})/);
   if (yt) {
@@ -49,8 +43,8 @@ function embed(url: string) {
 }
 
 /**
- * GitBook's `{% tag %}` blocks are not markdown. Turn each into plain HTML (with blank lines
- * around the body so the markdown inside is still parsed) before handing the text to remark.
+ * Turn GitBook `{% tag %}` blocks into HTML before parsing.
+ * Blank lines around the body keep the markdown inside working.
  */
 function convertGitbookBlocks(source: string): string {
   const out: string[] = [];
@@ -113,14 +107,12 @@ function convertGitbookBlocks(source: string): string {
       }
       case "file": {
         const src = attr(rest, "src") ?? "";
-        const mapped = src.startsWith("/files/") ? devsFile(src.slice("/files/".length)) : undefined;
-        const href = mapped?.path ?? src;
-        const label = mapped?.name ?? decodeURIComponent(src.split("/").pop() ?? src);
-        emit(`<a class="gb-file" href="${escapeAttr(href)}" download>${escapeAttr(label)}</a>`);
+        const label = decodeURIComponent(src.split("/").pop() ?? src);
+        emit(`<a class="gb-file" href="${escapeAttr(src)}" download>${escapeAttr(label)}</a>`);
         break;
       }
       default:
-        // endcode, endembed, endfile and anything unknown: drop the tag, keep the body.
+        // Closing tags and unknown tags are dropped.
         break;
     }
   }
@@ -135,7 +127,7 @@ function encodePath(p: string) {
   return p.split("/").map(encodeURIComponent).join("/");
 }
 
-/** Point image/file URLs at the copies in /public instead of GitBook's or the CDN's hosting. */
+/** Use the local copy of an image or file when we have one. */
 function localAsset(url: string): string | undefined {
   const gitbookAsset = url.match(/(?:^|\/)\.gitbook\/assets\/(.+)$/);
   if (gitbookAsset) {
@@ -171,7 +163,7 @@ function resolveLink(href: string, page: Page, byFile: Map<string, Page>, byUrl:
     return found ? { href: found.url + suffix, page: found } : undefined;
   }
   if (/^[a-z][a-z0-9+.-]*:/i.test(target) || target === "") return undefined;
-  // Relative link between markdown files (the Git-Synced docs repo).
+  // Relative link to another markdown file.
   const base = path.posix.dirname(page.file);
   const rel = path.posix.normalize(path.posix.join(base, decodeURIComponent(target)));
   const found = byFile.get(rel) ?? byFile.get(path.posix.join(rel, "README.md"));
@@ -194,7 +186,7 @@ function find(node: Element, tagName: string): Element | undefined {
   return hit;
 }
 
-/** GitBook "cards" tables: one card per row, with optional cover-image and link columns. */
+/** Render a GitBook cards table as a grid of cards. */
 function cardsFromTable(table: Element): Element {
   const headers: Element[] = [];
   const rows: Element[] = [];
@@ -233,10 +225,10 @@ function rehypeGitbook(page: Page, headings: Heading[], collected: { text: strin
   const byFile = new Map(pages.map((p) => [p.file, p]));
   const byUrl = new Map(pages.map((p) => [p.url, p]));
   return () => (tree: Root) => {
-    // The page title is rendered by the layout; drop the markdown's own leading h1.
+    // The layout renders the title, so drop the leading h1.
     const firstH1 = tree.children.findIndex((n) => isElement(n, "h1"));
     if (firstH1 !== -1) tree.children.splice(firstH1, 1);
-    // The live-site export repeats the page description as the first paragraph.
+    // Skip a first paragraph that just repeats the description.
     const firstEl = tree.children.find((n) => isElement(n));
     if (page.description && isElement(firstEl, "p") && toString(firstEl).trim() === page.description) {
       tree.children.splice(tree.children.indexOf(firstEl), 1);
@@ -256,7 +248,7 @@ function rehypeGitbook(page: Page, headings: Heading[], collected: { text: strin
         if (asset) props.href = asset;
         else if (resolved) {
           props.href = resolved.href;
-          // content-ref cards in the repo markdown are labelled with the file name.
+          // Label link cards with the page title.
           const classes = Array.isArray(props.className) ? props.className : [];
           if (classes.includes("gb-ref") && /\.md$|^\s*$/.test(toString(el))) {
             el.children = [{ type: "text", value: resolved.page.title }];
@@ -274,7 +266,7 @@ function rehypeGitbook(page: Page, headings: Heading[], collected: { text: strin
         props.srcSet = localAsset(props.srcSet) ?? props.srcSet;
       }
       if (el.tagName === "table") {
-        // Wide contract-address tables scroll inside their own box instead of the page.
+        // Let wide tables scroll sideways.
         const classes = Array.isArray(props.className) ? props.className : [];
         props.className = [...classes, "gb-table"];
       }
@@ -301,7 +293,7 @@ async function render(page: Page): Promise<RenderedPage> {
   const raw = fs.readFileSync(path.join(CONTENT_DIR, page.file), "utf8");
   const { content, data } = matter(raw);
   const source = content
-    // The live-site export prefixes every page with a pointer to llms.txt.
+    // Drop the llms.txt pointer line at the top of exported pages.
     .replace(/^\s*> For the complete documentation index, see \[llms\.txt\][^\n]*\n/, "")
     .replace(/&#x20;/g, " ");
   const headings: Heading[] = [];

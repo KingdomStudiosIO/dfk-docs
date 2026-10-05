@@ -1,6 +1,6 @@
 export type SiteId = "docs" | "devs";
 
-// One codebase, one Vercel project per site: the SITE env var picks which content set is built.
+// SITE picks which docs set this build serves.
 export const SITE: SiteId = process.env.SITE === "devs" ? "devs" : "docs";
 
 type SiteConfig = {

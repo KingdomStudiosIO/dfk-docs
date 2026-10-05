@@ -121,7 +121,7 @@ interface IQuestCoreV3 {
 
 ### ABIs
 
-{% file src="/files/zfnhZmKgNqRAR88MM4w0" %}
+{% file src="/assets/devs/files/QuestCoreV3DiamondExpeditionsCondensed.json" %}
 
 ## Types
 

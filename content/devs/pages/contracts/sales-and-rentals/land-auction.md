@@ -49,7 +49,7 @@ interface ILandAuction {
 
 ### ABIs
 
-{% file src="/files/ozMnZ3gaJNfmCHgvGaOn" %}
+{% file src="/assets/devs/files/LandAuctionUpgradeable.json" %}
 
 ## Historical Contracts
 
@@ -99,4 +99,4 @@ interface ILandAuction {
 
 ### ABIs
 
-{% file src="/files/BV8tdMIz8D7Qkhwyidtw" %}
+{% file src="/assets/devs/files/LandAuction.json" %}

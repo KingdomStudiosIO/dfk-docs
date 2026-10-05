@@ -63,4 +63,4 @@ interface ILockedTokenRaffle {
 
 ### ABIs
 
-{% file src="/files/h1XrD5OPYh2FD0S6Dqcl" %}
+{% file src="/assets/devs/files/LockedTokenRaffle.json" %}

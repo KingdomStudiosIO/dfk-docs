@@ -46,7 +46,7 @@ interface IDarkSummoning {
 
 ### ABIs
 
-{% file src="/files/2zXcnvG5hjSy8kpjy4Dw" %}
+{% file src="/assets/devs/files/DarkSummoningUpgradeable.json" %}
 
 ## Related Contracts
 

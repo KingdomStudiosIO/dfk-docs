@@ -49,7 +49,7 @@ interface IAssistingAuctionUpgradeable {
 
 ### ABIs
 
-{% file src="/files/FpQBOQk62LK0y4iDlOjs" %}
+{% file src="/assets/devs/files/AssistingAuctionUpgradeable.json" %}
 
 ## Historical Contracts
 
@@ -99,4 +99,4 @@ interface IAssistingAuction {
 
 ### ABIs
 
-{% file src="/files/IHp9rKyhGwGV6LirMzZQ" %}
+{% file src="/assets/devs/files/AssistingAuction.json" %}

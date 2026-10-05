@@ -59,7 +59,7 @@ interface IAccessoryCoreDiamond {
 
 ### ABI
 
-{% file src="/files/W37F4p3MxfCZF6ha05uq" %}
+{% file src="/assets/devs/files/AccessoryCoreDiamond.json" %}
 
 ## Types
 

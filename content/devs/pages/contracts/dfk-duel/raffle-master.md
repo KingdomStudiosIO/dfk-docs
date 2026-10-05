@@ -94,9 +94,9 @@ interface IGoldPot {
 
 ### ABIs
 
-{% file src="/files/Imz0jESPS9cxG6BS8VCE" %}
+{% file src="/assets/devs/files/raffleMaster.json" %}
 
-{% file src="/files/T1kHJKsfzKmATIlMthDg" %}
+{% file src="/assets/devs/files/goldPot.json" %}
 
 ## Historical Contracts
 

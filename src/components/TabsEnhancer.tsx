@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-/** Turns the stacked `.gb-tabs` sections in rendered markdown into a clickable tab bar. */
+/** Adds a tab bar to .gb-tabs blocks on the page. */
 export function TabsEnhancer() {
   useEffect(() => {
     for (const group of document.querySelectorAll<HTMLElement>(".gb-tabs:not(.is-enhanced)")) {

@@ -57,7 +57,7 @@ interface IJourney {
 
 ### ABIs
 
-{% file src="/files/oLar7yocYX4Ycigop39y" %}
+{% file src="/assets/devs/files/Journey.json" %}
 
 ## Related Contracts
 

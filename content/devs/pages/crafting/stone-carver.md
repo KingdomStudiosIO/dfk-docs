@@ -44,7 +44,7 @@ interface IStoneCarver {
 
 ### ABIs
 
-{% file src="/files/cajwFWfICgSIhTH1IzXF" %}
+{% file src="/assets/devs/files/StoneCarver2.json" %}
 
 ## Historical Contracts
 

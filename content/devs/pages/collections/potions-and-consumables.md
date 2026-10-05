@@ -67,7 +67,7 @@ interface IInventoryItem {
 
 ### ABIs
 
-{% file src="/files/GqKO6dye265FylPJo5l8" %}
+{% file src="/assets/devs/files/ConsumableItem.json" %}
 
 ## Historical Contracts
 

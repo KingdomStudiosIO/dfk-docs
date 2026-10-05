@@ -49,7 +49,7 @@ interface IPetHatching {
 
 ### ABIs
 
-{% file src="/files/AvWDERQByGhmVY8yuJMz" %}
+{% file src="/assets/devs/files/PetHatchingUpgradeable (1).json" %}
 
 ## Historical Contracts
 

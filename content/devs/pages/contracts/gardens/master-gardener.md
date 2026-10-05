@@ -197,9 +197,9 @@ interface IMasterGardenerHarmony {
 
 ### ABIs
 
-{% file src="/files/cTh1a99FP6jI0N9CcBNV" %}
+{% file src="/assets/devs/files/MasterGardenerDFK.json" %}
 
-{% file src="/files/OdkemUr8jklkejhiyHZl" %}
+{% file src="/assets/devs/files/MasterGardener.json" %}
 
 ## Garden Pairs
 

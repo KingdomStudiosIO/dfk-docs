@@ -58,4 +58,4 @@ interface IGeneReroll {
 
 ### ABIs
 
-{% file src="/files/3d4ZpvHPYSFrg6aVISmp" %}
+{% file src="/assets/devs/files/GeneRerollUpgradeable.json" %}

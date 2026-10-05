@@ -107,7 +107,7 @@ interface IHeroCoreDiamond {
 
 ### ABIs
 
-{% file src="/files/fNWElIqLj8vOguFdcnAH" %}
+{% file src="/assets/devs/files/HeroCoreDiamond.json" %}
 
 ## Historical Contracts
 
@@ -164,7 +164,7 @@ interface IHeroCore {
 
 ### ABIs
 
-{% file src="/files/6fr6vq6UHKhYYdTo8Cxw" %}
+{% file src="/assets/devs/files/HeroCoreUpgradeable.json" %}
 
 ## Data Tables
 
@@ -593,11 +593,11 @@ enum HeroEquipmentSlot {
 
 ### Names
 
-{% file src="/files/sbCKkuLpcRJ1uXrqxUOC" %}
+{% file src="/assets/devs/files/maleFirstNames.json" %}
 
-{% file src="/files/HmeQcLJO6k7Qf81uL6o5" %}
+{% file src="/assets/devs/files/femaleFirstNames.json" %}
 
-{% file src="/files/9KxZEKZZuFA0ul8bvQlD" %}
+{% file src="/assets/devs/files/lastNames.json" %}
 
 ## Related Contracts
 

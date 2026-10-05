@@ -60,7 +60,7 @@ interface ILandCore {
 
 ### ABIs
 
-{% file src="/files/kWSfUI9xqwCIVw5OU8IW" %}
+{% file src="/assets/devs/files/LandCore.json" %}
 
 ## Historical Contracts
 

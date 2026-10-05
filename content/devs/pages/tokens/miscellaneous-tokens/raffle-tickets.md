@@ -105,9 +105,9 @@ interface IRaffleWholesale {
 
 ### ABIs
 
-{% file src="/files/ZOY1Kz3xAk5pGoyM2Nxd" %}
+{% file src="/assets/devs/files/DuelRaffleTicket.json" %}
 
-{% file src="/files/JL96C3TPpww17hT2N2SF" %}
+{% file src="/assets/devs/files/RaffleWholesale.json" %}
 
 ## Historical Contracts
 

@@ -41,7 +41,7 @@ interface IAirdropClaim {
 
 ### ABIs
 
-{% file src="/files/dSCl16RKsGCJ4bK5AbNY" %}
+{% file src="/assets/devs/files/AirdropClaim.json" %}
 
 ## Historical Contracts
 
@@ -77,4 +77,4 @@ interface IAirdropClaimV1 {
 
 ### ABIs
 
-{% file src="/files/rCvceao6hS8NLTXGlqfa" %}
+{% file src="/assets/devs/files/historical/AirdropClaim.json" %}

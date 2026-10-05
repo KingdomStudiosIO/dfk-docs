@@ -4,14 +4,14 @@ import { SITE } from "./site";
 
 export type Page = {
   title: string;
-  /** Site-relative URL, "/" for the home page. Matches the URLs GitBook served. */
+  /** Path on the site, "/" for home. */
   url: string;
-  /** Markdown file, relative to the site's content directory. */
+  /** Markdown file under the content directory. */
   file: string;
   description?: string;
 };
 
-export type NavNode = Page & { children: NavNode[]; /** Sidebar link to another site, not a page here. */ external?: boolean };
+export type NavNode = Page & { children: NavNode[]; /** Sidebar link to another site. */ external?: boolean };
 export type NavSection = { title?: string; items: NavNode[] };
 export type Nav = { sections: NavSection[]; pages: Page[] };
 
@@ -19,7 +19,7 @@ export const CONTENT_DIR = path.join(process.cwd(), "content", SITE);
 
 type LlmsEntry = { title: string; url: string; description?: string };
 
-/** llms.txt (as served by GitBook) lists every page in navigation order with its real URL. */
+/** llms.txt lists every page in sidebar order with its URL. */
 function readLlms(origin: string): LlmsEntry[] {
   const text = fs.readFileSync(path.join(CONTENT_DIR, "llms.txt"), "utf8");
   const entries: LlmsEntry[] = [];
@@ -58,7 +58,7 @@ function docsNav(): Nav {
     if (!entry) throw new Error(`SUMMARY.md has more pages than llms.txt (at "${item[2]}")`);
     const node: NavNode = {
       title: item[2].replace(/\\(.)/g, "$1"),
-      // The first entry is the home page (GitBook serves it at both / and /readme).
+      // First entry is the home page.
       url: pages.length === 0 ? "/" : entry.url,
       file: item[3],
       description: entry.description,
@@ -107,14 +107,14 @@ function devsNav(): Nav {
     pages.push(node);
     byUrl.set(url, node);
     if (url === "/") return void sections[0].items.push(node);
-    // Nest under the nearest ancestor path that is itself a page.
+    // Nest under the closest parent path that has a page.
     const segments = url.split("/").filter(Boolean);
     for (let n = segments.length - 1; n > 0; n--) {
       const parent = byUrl.get("/" + segments.slice(0, n).join("/"));
       if (parent) return void parent.children.push(node);
     }
     if (segments.length === 1) return void sections[0].items.push(node);
-    // No page at the top-level path: it is a sidebar group.
+    // No page at the top-level path, so treat it as a sidebar group.
     let section = sectionBySegment.get(segments[0]);
     if (!section) {
       section = { title: titleize(segments[0]), items: [] };
