@@ -40,6 +40,21 @@ Text
 Images go in `public/assets/docs/` or `public/assets/devs/` and are referenced as
 `/assets/docs/my-image.png`.
 
+## Downloadable files (ABIs)
+
+Attachments on the developer docs live in `public/assets/devs/files/` under their plain
+file names, and a page offers one for download with:
+
+```
+{% file src="/assets/devs/files/HeroCore.json" %}
+```
+
+- **Update an ABI:** replace the file in that folder, keeping its name. Every page that
+  references it picks up the new version.
+- **Add one:** drop the file in the folder and add a `{% file %}` line to the page.
+- **Keep an old version:** superseded ABIs are in `files/historical/`, so the current and
+  historical contract can share a file name.
+
 ## Adding, renaming or removing a page
 
 The sidebar and page addresses are listed explicitly, so a new file needs an entry:
@@ -77,4 +92,3 @@ blocks. Pass `--offline` to skip its comparison against the published site's pag
 - `src/lib/markdown.ts` converts the markdown (including the GitBook blocks) to HTML and
   rewrites links and image paths.
 - `src/app/[[...slug]]/page.tsx` is the single page template.
-- `scripts/import-content.py` is the one-off script that imported the content from GitBook.

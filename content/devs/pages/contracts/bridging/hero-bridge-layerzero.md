@@ -58,4 +58,4 @@ interface IHeroBridgeLZ {
 
 ### ABIs
 
-{% file src="/files/KUrW6jL4NSUoaWdPRfp4" %}
+{% file src="/assets/devs/files/HeroBridgeLZDiamond.json" %}

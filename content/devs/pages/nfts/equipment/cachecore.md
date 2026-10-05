@@ -41,4 +41,4 @@ interface ICacheCoreDiamond {
 
 ### ABI
 
-{% file src="/files/w5ltNWFYLq4hfXGKOU9W" %}
+{% file src="/assets/devs/files/CacheCoreDiamond.json" %}

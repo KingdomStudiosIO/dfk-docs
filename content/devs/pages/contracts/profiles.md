@@ -94,11 +94,11 @@ interface IIdentityTokenRouter {
 
 ### ABIs
 
-{% file src="/files/4BmnYRJs72GDmh7gcc7m" %}
+{% file src="/assets/devs/files/Profiles.json" %}
 
-{% file src="/files/PF3A2sIv4AzSu1mBFmrH" %}
+{% file src="/assets/devs/files/Stylist.json" %}
 
-{% file src="/files/0x7VfKlwZgL4X9e8gVv5" %}
+{% file src="/assets/devs/files/IdentityTokenRouter.json" %}
 
 ## Historical Contracts
 
@@ -167,6 +167,6 @@ interface IStylistHarmony {
 
 ### ABIs
 
-{% file src="/files/YroKZIKBsbt6r8H0ubfu" %}
+{% file src="/assets/devs/files/ProfilesV1.json" %}
 
-{% file src="/files/EnSL1a59BWiAJ1vuCh30" %}
+{% file src="/assets/devs/files/historical/Stylist.json" %}

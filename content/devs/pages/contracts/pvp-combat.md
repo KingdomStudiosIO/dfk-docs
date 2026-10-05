@@ -76,9 +76,9 @@ interface IPVPDiamond {
 
 ### ABIs
 
-{% file src="/files/Qlo0WbRlefVzNNDjRmd6" %}
+{% file src="/assets/devs/files/PVPDiamond.json" %}
 
-{% file src="/files/Qv1tOe7vHjZWDIdXeE2Z" %}
+{% file src="/assets/devs/files/PVPDiamond-minified.json" %}
 
 ### Mappings
 

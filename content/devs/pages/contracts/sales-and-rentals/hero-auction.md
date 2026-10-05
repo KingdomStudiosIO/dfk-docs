@@ -52,7 +52,7 @@ interface IHeroAuctionUpgradeable {
 
 ### ABIs
 
-{% file src="/files/vT9Z9NIk07jfius7xjhT" %}
+{% file src="/assets/devs/files/HeroAuctionUpgradeable.json" %}
 
 ## Historical Contracts
 
@@ -99,4 +99,4 @@ interface ISaleAuction {
 
 ### ABIs
 
-{% file src="/files/ZyRKVvh8zK13IBmM4be5" %}
+{% file src="/assets/devs/files/SaleAuction.json" %}

@@ -34,12 +34,6 @@ function attr(tag: string, name: string) {
   return tag.match(new RegExp(`${name}="([^"]*)"`))?.[1];
 }
 
-let fileMap: Record<string, { name: string; path: string }> | undefined;
-function devsFile(id: string) {
-  fileMap ??= JSON.parse(fs.readFileSync(path.join(CONTENT_DIR, "file-map.json"), "utf8"));
-  return fileMap![id];
-}
-
 function embed(url: string) {
   const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]{6,})/);
   if (yt) {
@@ -113,10 +107,8 @@ function convertGitbookBlocks(source: string): string {
       }
       case "file": {
         const src = attr(rest, "src") ?? "";
-        const mapped = src.startsWith("/files/") ? devsFile(src.slice("/files/".length)) : undefined;
-        const href = mapped?.path ?? src;
-        const label = mapped?.name ?? decodeURIComponent(src.split("/").pop() ?? src);
-        emit(`<a class="gb-file" href="${escapeAttr(href)}" download>${escapeAttr(label)}</a>`);
+        const label = decodeURIComponent(src.split("/").pop() ?? src);
+        emit(`<a class="gb-file" href="${escapeAttr(src)}" download>${escapeAttr(label)}</a>`);
         break;
       }
       default:

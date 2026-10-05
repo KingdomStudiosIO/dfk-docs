@@ -61,4 +61,4 @@ interface IEquipmentBridge {
 
 ### ABIs
 
-{% file src="/files/5inbi6vDJoQIhs64YwfR" %}
+{% file src="/assets/devs/files/PetBridgeUpgradeable.json" %}

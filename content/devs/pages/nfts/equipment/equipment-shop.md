@@ -33,4 +33,4 @@ interface IVisageShop {
 
 ### ABI
 
-{% file src="/files/vXVaMRhBVR2Itfw7NkTb" %}
+{% file src="/assets/devs/files/EquipmentShopUpgradeable.json" %}

@@ -42,7 +42,7 @@ interface ICharityFund {
 
 ### ABIs
 
-{% file src="/files/27lzcJV0f8OIs0NVJLTb" %}
+{% file src="/assets/devs/files/CharityFund.json" %}
 
 ## Historical Contracts
 

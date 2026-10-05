@@ -136,6 +136,6 @@ interface IWrappedNativeToken {
 
 ### ABIs
 
-{% file src="/files/rGDQHy9iQeeGMuKAc5cb" %}
+{% file src="/assets/devs/files/JewelToken.json" %}
 
-{% file src="/files/m74p9AN1xLyswGjk8Ihf" %}
+{% file src="/assets/devs/files/WrappedNativeToken.json" %}

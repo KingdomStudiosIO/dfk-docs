@@ -51,4 +51,4 @@ interface INonTransferableInventoryItem {
 
 ### ABIs
 
-{% file src="/files/EVnxnreYc75pHZqR1VRg" %}
+{% file src="/assets/devs/files/BirthdayCake1.json" %}

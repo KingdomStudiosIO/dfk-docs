@@ -140,7 +140,7 @@ interface IBazaarDiamond {
 
 ### ABI
 
-{% file src="/files/PlCtCfeMFjusb6AQTQFC" %}
+{% file src="/assets/devs/files/BazaarDiamond (2).json" %}
 
 ## Types
 

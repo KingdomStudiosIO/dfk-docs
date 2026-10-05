@@ -32,11 +32,11 @@ The DFK Dex is built on top of the UniswapV2 system. For more information, pleas
 
 ### ABIs
 
-{% file src="/files/ZeX33PHnhmYBTu4vVUfa" %}
+{% file src="/assets/devs/files/UniswapV2Factory.json" %}
 
-{% file src="/files/okOwTvFi74wuYTD9jbDm" %}
+{% file src="/assets/devs/files/UniswapV2Router02.json" %}
 
-{% file src="/files/bNk8mzeJApYEwa9QYq9X" %}
+{% file src="/assets/devs/files/UniswapV2Pair.json" %}
 
 ## Historical Contracts
 

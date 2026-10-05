@@ -412,14 +412,14 @@ interface IDFKDuel {
 
 ### ABIs
 
-{% file src="/files/TcHSt4xFw8g2kw67dd2t" %}
+{% file src="/assets/devs/files/DuelS5Diamond.json" %}
 
-{% file src="/files/vrM0goNr91HKbdHbc19i" %}
+{% file src="/assets/devs/files/DuelS4Diamond.json" %}
 
-{% file src="/files/7UgD5Kn4u34BlyApRt2A" %}
+{% file src="/assets/devs/files/DuelS3Diamond.json" %}
 
-{% file src="/files/C74Xx3AWTXY0GzWr68xb" %}
+{% file src="/assets/devs/files/DFKDuelS2.json" %}
 
-{% file src="/files/UubVwbnBIxZzs7AqajKy" %}
+{% file src="/assets/devs/files/DFKDuelS1.json" %}
 
-{% file src="/files/1VAIZHDUvt9espsGUbFz" %}
+{% file src="/assets/devs/files/dfkDuel.json" %}

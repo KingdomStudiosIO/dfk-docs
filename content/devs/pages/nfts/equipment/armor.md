@@ -59,7 +59,7 @@ interface IArmorCoreDiamond {
 
 ### ABI
 
-{% file src="/files/wilQ1LXS4x8zDLnqtS6C" %}
+{% file src="/assets/devs/files/ArmorCoreDiamond.json" %}
 
 ## Types
 

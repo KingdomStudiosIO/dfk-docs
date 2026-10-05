@@ -76,4 +76,4 @@ interface ICrystalToken {
 
 ### ABIs
 
-{% file src="/files/AUGihK6iF62nQ8t936Li" %}
+{% file src="/assets/devs/files/CrystalToken.json" %}

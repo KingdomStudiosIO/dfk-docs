@@ -44,7 +44,7 @@ interface IItemGoldTraderV2 {
 
 ### ABIs
 
-{% file src="/files/AYEFbOs1ryJLSK85RusL" %}
+{% file src="/assets/devs/files/ItemGoldTraderV2.json" %}
 
 ## Historical Contracts
 
@@ -83,4 +83,4 @@ interface IItemGoldTrader {
 
 ### ABIs
 
-{% file src="/files/ArctGNvOxP2VfunK7G9B" %}
+{% file src="/assets/devs/files/ItemGoldTrader.json" %}

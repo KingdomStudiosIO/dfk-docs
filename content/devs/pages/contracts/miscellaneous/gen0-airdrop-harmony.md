@@ -39,4 +39,4 @@ interface IGen0Airdrop {
 
 ### ABIs
 
-{% file src="/files/o0WQ0ywAp0EPfwzfkzXz" %}
+{% file src="/assets/devs/files/Gen0Airdrop.json" %}

@@ -55,7 +55,7 @@ interface ILPStaking {
 
 ### ABI
 
-{% file src="/files/bNIbwYCmYrbHXGqb9S0N" %}
+{% file src="/assets/devs/files/LPStakingDiamond.json" %}
 
 ## Incentivized Garden Pairs
 

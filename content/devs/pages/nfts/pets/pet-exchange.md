@@ -61,9 +61,9 @@ interface IPasture {
 
 ### ABIs
 
-{% file src="/files/RnGaLhvhVSTp4i2BGhwv" %}
+{% file src="/assets/devs/files/PetExchangeCV.json" %}
 
-{% file src="/files/iN8l7rwz7LfEdkCZxGuz" %}
+{% file src="/assets/devs/files/Pasture.json" %}
 
 ## Historical Contracts
 
@@ -103,7 +103,7 @@ interface IPetExchangeHarmony {
 
 ### ABIs
 
-{% file src="/files/xSNUV4ep9zRU2ZdMDiBL" %}
+{% file src="/assets/devs/files/PetExchange.json" %}
 
 ## Related Contracts
 

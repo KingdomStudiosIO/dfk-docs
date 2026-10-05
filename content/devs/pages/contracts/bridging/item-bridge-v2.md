@@ -57,4 +57,4 @@ interface IItemBridgeLZ {
 
 ### ABIs
 
-{% file src="/files/blPnXNhAkRYE88yzGxcX" %}
+{% file src="/assets/devs/files/ItemBridgeLZDiamond.json" %}

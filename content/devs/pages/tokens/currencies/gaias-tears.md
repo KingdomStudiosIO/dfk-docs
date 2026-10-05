@@ -85,9 +85,9 @@ interface ITokenMigrator {
 
 ### ABIs
 
-{% file src="/files/mlVxdmt7IRnIdVja03Hl" %}
+{% file src="/assets/devs/files/GaiaTears.json" %}
 
-{% file src="/files/7zC6QW2hVTBuTzYeW79Q" %}
+{% file src="/assets/devs/files/tokenMigrator.json" %}
 
 ## Historical Contracts
 

@@ -137,11 +137,11 @@ interface IFeeCollector {
 
 ### ABIs
 
-{% file src="/files/Q4aJ6JTp6ENJglLPqYvK" %}
+{% file src="/assets/devs/files/VoteEscrowRewardPool.json" %}
 
-{% file src="/files/mdMmv6HfPwZGSUS2fqvS" %}
+{% file src="/assets/devs/files/Jeweler.json" %}
 
-{% file src="/files/zFYkgE4VpzmlskwNU3UK" %}
+{% file src="/assets/devs/files/FeeCollector.json" %}
 
 ## Related Contracts
 

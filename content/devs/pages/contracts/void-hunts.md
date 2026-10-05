@@ -106,6 +106,6 @@ interface IHuntsDiamond {
 
 ### ABIs
 
-{% file src="/files/Pc0vsRwxyLaO1mPjNgm4" %}
+{% file src="/assets/devs/files/HuntsDiamond.json" %}
 
-{% file src="/files/DXoZzssR622XnGeZy8SK" %}
+{% file src="/assets/devs/files/HuntsDiamond-minified.json" %}

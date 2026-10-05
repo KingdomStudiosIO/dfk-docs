@@ -39,7 +39,7 @@ interface IAlchemist {
 
 ### ABIs
 
-{% file src="/files/KNEjpFWmflLibb9sRGSo" %}
+{% file src="/assets/devs/files/Alchemist.json" %}
 
 ## Historical Contracts
 

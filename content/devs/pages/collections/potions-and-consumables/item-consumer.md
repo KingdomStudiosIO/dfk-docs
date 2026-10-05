@@ -35,7 +35,7 @@ interface IItemConsumer {
 
 ### ABIs
 
-{% file src="/files/Wjhs2XYOpbylc2Rez8lV" %}
+{% file src="/assets/devs/files/ItemConsumer.json" %}
 
 ## Historical Contracts
 

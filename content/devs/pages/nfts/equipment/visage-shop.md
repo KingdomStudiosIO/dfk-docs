@@ -39,4 +39,4 @@ interface IVisageShop {
 
 ### ABI
 
-{% file src="/files/mgtPw5nbJI6Zfspt8qpB" %}
+{% file src="/assets/devs/files/VisageShopUpgradeable.json" %}

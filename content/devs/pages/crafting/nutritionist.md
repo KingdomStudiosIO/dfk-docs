@@ -29,7 +29,7 @@ interface INutritionist {
 
 ### ABIs
 
-{% file src="/files/2UAkCbGQ47VYEve1RFFH" %}
+{% file src="/assets/devs/files/nutritionist/PetCoreDiamond.json" %}
 
 ## Types
 
