@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   icons: { icon: site.icon },
 };
 
-// Applied before paint so a stored dark/light choice does not flash.
+// Set the theme before first paint to avoid a flash.
 const themeScript = `try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

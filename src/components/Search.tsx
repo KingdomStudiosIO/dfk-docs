@@ -27,7 +27,7 @@ function snippet(text: string, query: string) {
   const term = query.trim().split(/\s+/)[0]?.toLowerCase() ?? "";
   const at = Math.max(0, text.toLowerCase().indexOf(term));
   const start = Math.max(0, at - 50);
-  return (start > 0 ? "…" : "") + text.slice(start, start + 140).trim() + "…";
+  return (start > 0 ? "..." : "") + text.slice(start, start + 140).trim() + "...";
 }
 
 export function Search() {
@@ -83,7 +83,7 @@ export function Search() {
           loadIndex();
           setOpen(true);
         }}
-        placeholder="Search…"
+        placeholder="Search..."
         aria-label="Search the docs"
         className="w-24 min-w-0 rounded-md border border-(--line) bg-transparent px-3 py-1.5 text-sm outline-none focus:border-accent sm:w-64"
       />

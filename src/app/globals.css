@@ -30,7 +30,7 @@ html {
   scroll-padding-top: 5rem;
 }
 
-/* ---- GitBook blocks ---- */
+/* GitBook blocks */
 
 .gb-hint {
   @apply my-5 rounded-lg border-l-4 px-4 py-1 text-[0.95em];
@@ -98,7 +98,7 @@ a.gb-card:hover {
 .gb-tab {
   @apply px-4 py-1;
 }
-/* Without JS every tab is shown, labelled; TabsEnhancer turns the labels into a tab bar. */
+/* Tabs show stacked with labels until the script adds the tab bar. */
 .gb-tab::before {
   content: attr(data-title);
   @apply block pt-3 text-xs font-semibold uppercase tracking-wide opacity-70;
@@ -148,7 +148,7 @@ a.gb-card:hover {
   @apply cursor-pointer font-semibold;
 }
 
-/* ---- code highlighting (highlight.js token classes) ---- */
+/* Code highlighting */
 .hljs-comment,
 .hljs-quote {
   color: #8b949e;

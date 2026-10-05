@@ -7,19 +7,17 @@ Source for the DeFi Kingdoms documentation sites:
 | Game docs (whitepaper) | `content/docs` | docs.defikingdoms.com |
 | Developer docs | `content/devs` | devs.defikingdoms.com |
 
-Both sites are built from this one repository. Pages are plain markdown; the sites are
-generated at build time, so there is no database or CMS.
+Both sites are built from this repo. Pages are plain markdown and there is no database or CMS.
 
 ## Publishing
 
-**Anything merged or pushed to `main` is published to both sites automatically**, usually
-within a couple of minutes. To work on something without publishing it, use a branch and
-merge it when it is ready.
+Anything pushed or merged to `main` goes live on both sites within a couple of minutes.
+Use a branch for work that is not ready to publish.
 
 ## Editing a page
 
-Edit the markdown file under `content/docs/` or `content/devs/pages/`. You can do this in
-the GitHub web editor or locally.
+Edit the markdown file under `content/docs/` or `content/devs/pages/`, in the GitHub editor
+or locally.
 
 GitBook-style blocks still work:
 
@@ -57,7 +55,7 @@ file names, and a page offers one for download with:
 
 ## Adding, renaming or removing a page
 
-The sidebar and page addresses are listed explicitly, so a new file needs an entry:
+A new page also needs an entry in the page list:
 
 - **Game docs:** add the page to `content/docs/SUMMARY.md` (this is the sidebar), **and** add a
   line at the same position in `content/docs/llms.txt` giving the address it should have.
@@ -83,8 +81,8 @@ SITE=docs npm run build && SITE=docs python3 scripts/check-build.py
 SITE=devs npm run build && SITE=devs python3 scripts/check-build.py
 ```
 
-`check-build.py` reports dead internal links, missing images and leftover unconverted
-blocks. Pass `--offline` to skip its comparison against the published site's page list.
+`check-build.py` reports dead links, missing images and unconverted blocks. Add `--offline`
+to skip the comparison with the live site's page list.
 
 ## How it is put together
 
