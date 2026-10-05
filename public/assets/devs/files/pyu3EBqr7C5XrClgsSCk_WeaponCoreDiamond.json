@@ -1,0 +1,4820 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "facetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IDiamondCut.FacetCutAction",
+            "name": "action",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes4[]",
+            "name": "functionSelectors",
+            "type": "bytes4[]"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct IDiamondCut.FacetCut[]",
+        "name": "_diamondCut",
+        "type": "tuple[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "_init",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "_calldata",
+        "type": "bytes"
+      }
+    ],
+    "name": "DiamondCut",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "facetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IDiamondCut.FacetCutAction",
+            "name": "action",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes4[]",
+            "name": "functionSelectors",
+            "type": "bytes4[]"
+          }
+        ],
+        "internalType": "struct IDiamondCut.FacetCut[]",
+        "name": "_diamondCut",
+        "type": "tuple[]"
+      },
+      {
+        "internalType": "address",
+        "name": "_init",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "_calldata",
+        "type": "bytes"
+      }
+    ],
+    "name": "diamondCut",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "_functionSelector",
+        "type": "bytes4"
+      }
+    ],
+    "name": "facetAddress",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "facetAddress_",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "facetAddresses",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "facetAddresses_",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_facet",
+        "type": "address"
+      }
+    ],
+    "name": "facetFunctionSelectors",
+    "outputs": [
+      {
+        "internalType": "bytes4[]",
+        "name": "facetFunctionSelectors_",
+        "type": "bytes4[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "facets",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "facetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes4[]",
+            "name": "functionSelectors",
+            "type": "bytes4[]"
+          }
+        ],
+        "internalType": "struct IDiamondLoupe.Facet[]",
+        "name": "facets_",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "_interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "owner_",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "AddressUtils__NotContract",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC165Base__InvalidInterfaceId",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Base__BalanceQueryZeroAddress",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Base__ERC721ReceiverNotImplemented",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Base__InvalidOwner",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Base__MintToZeroAddress",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Base__NonExistentToken",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Base__NotOwnerOrApproved",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Base__NotTokenOwner",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Base__SelfApproval",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Base__TokenAlreadyMinted",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Base__TransferToZeroAddress",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ERC721Metadata__NonExistentToken",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "EnumerableMap__IndexOutOfBounds",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "EnumerableMap__NonExistentKey",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "EnumerableSet__IndexOutOfBounds",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Pausable__NotPaused",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Pausable__Paused",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "SolidStateERC721__PayableApproveNotSupported",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "SolidStateERC721__PayableTransferNotSupported",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "UintUtils__InsufficientHexLength",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "Approval",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "approved",
+        "type": "bool"
+      }
+    ],
+    "name": "ApprovalForAll",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "Paused",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "previousAdminRole",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "newAdminRole",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "Transfer",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "Unpaused",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "approve",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "balanceOf",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      }
+    ],
+    "name": "bridgeMint",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getApproved",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "hasRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      }
+    ],
+    "name": "isApprovedForAll",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "name",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ownerOf",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "paused",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "safeTransferFrom",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "safeTransferFrom",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "operator",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "status",
+        "type": "bool"
+      }
+    ],
+    "name": "setApprovalForAll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_heroCore",
+        "type": "address"
+      }
+    ],
+    "name": "setHeroCore",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_nextId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setNextId",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_randomGenerator",
+        "type": "address"
+      }
+    ],
+    "name": "setRandomGenerator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_weaponType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_displayId",
+        "type": "uint16"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_rarity",
+        "type": "uint8"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum WeaponType",
+                "name": "weaponType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "displayId",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "rarity",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint64",
+                "name": "craftedBy",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "basePotency",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "focusRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "restorationCount",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct DisplayInfoMagicAttack",
+            "name": "displayInfoMagicAttack",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint64",
+                "name": "equippedTo",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "equippableAt",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint16",
+                "name": "maxDurability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "durability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "maxRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "remainingRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "equipRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar3",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct StateEnchantments",
+            "name": "stateEnchantments",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "bonus1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus4",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar4",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "baseDamage",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "accuracyRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "uniqueSettings",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "speedModifier",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct BonusInfoPhysicalAttack",
+            "name": "bonusInfoPhysicalAttack",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct Weapon",
+        "name": "_weaponDefaults",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "enum VariableToChange",
+            "name": "variableToChange",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "changeType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16[2]",
+            "name": "simpleBaseRange",
+            "type": "uint16[2]"
+          },
+          {
+            "internalType": "uint16[]",
+            "name": "scalarBaseRange",
+            "type": "uint16[]"
+          },
+          {
+            "internalType": "uint16[]",
+            "name": "scalarMaxRange",
+            "type": "uint16[]"
+          },
+          {
+            "internalType": "uint16[]",
+            "name": "optionArray",
+            "type": "uint16[]"
+          },
+          {
+            "internalType": "uint32[]",
+            "name": "optionChances",
+            "type": "uint32[]"
+          }
+        ],
+        "internalType": "struct Change[]",
+        "name": "_changes",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "setWeaponBaseAttributes",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "symbol",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenByIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenOfOwnerByIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "tokenURI",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalSupply",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "transferFrom",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_equipmentId",
+        "type": "uint256"
+      }
+    ],
+    "name": "transferOnBehalf",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "unpause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_equipmentId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_visageId",
+        "type": "uint256"
+      }
+    ],
+    "name": "validateEquipmentVisageTypeMatch",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "summonedTime",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "nextSummonTime",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "summonerId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "assistantId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint32",
+                "name": "summons",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint32",
+                "name": "maxSummons",
+                "type": "uint32"
+              }
+            ],
+            "internalType": "struct SummoningInfo",
+            "name": "summoningInfo",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "statGenes",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "visualGenes",
+                "type": "uint256"
+              },
+              {
+                "internalType": "enum Rarity",
+                "name": "rarity",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bool",
+                "name": "shiny",
+                "type": "bool"
+              },
+              {
+                "internalType": "uint16",
+                "name": "generation",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint32",
+                "name": "firstName",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastName",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint8",
+                "name": "shinyStyle",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "class",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "subClass",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct HeroInfo",
+            "name": "info",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "staminaFullAt",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "hpFullAt",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "mpFullAt",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16",
+                "name": "level",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint64",
+                "name": "xp",
+                "type": "uint64"
+              },
+              {
+                "internalType": "address",
+                "name": "currentQuest",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "sp",
+                "type": "uint8"
+              },
+              {
+                "internalType": "enum HeroStatus",
+                "name": "status",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct HeroState",
+            "name": "state",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint16",
+                "name": "strength",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "intelligence",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "wisdom",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "luck",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "agility",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "vitality",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "endurance",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "dexterity",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "hp",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mp",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "stamina",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct HeroStats",
+            "name": "stats",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint16",
+                "name": "strength",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "intelligence",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "wisdom",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "luck",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "agility",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "vitality",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "endurance",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "dexterity",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "hpSm",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "hpRg",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "hpLg",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mpSm",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mpRg",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mpLg",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct HeroStatGrowth",
+            "name": "primaryStatGrowth",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint16",
+                "name": "strength",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "intelligence",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "wisdom",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "luck",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "agility",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "vitality",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "endurance",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "dexterity",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "hpSm",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "hpRg",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "hpLg",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mpSm",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mpRg",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mpLg",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct HeroStatGrowth",
+            "name": "secondaryStatGrowth",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint16",
+                "name": "mining",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "gardening",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "foraging",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "fishing",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "craft1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "craft2",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct HeroProfessionsV2",
+            "name": "professions",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "equippedSlots",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "petId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint128",
+                "name": "weapon1Id",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "weapon1VisageId",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "weapon2Id",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "weapon2VisageId",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "offhand1Id",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "offhand1VisageId",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "offhand2Id",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "offhand2VisageId",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "armorId",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "armorVisageId",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "accessoryId",
+                "type": "uint128"
+              },
+              {
+                "internalType": "uint128",
+                "name": "accessoryVisageId",
+                "type": "uint128"
+              }
+            ],
+            "internalType": "struct HeroEquipmentV2",
+            "name": "equipment",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct HeroV3",
+        "name": "_hero",
+        "type": "tuple"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_equipmentId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum HeroEquipmentSlot",
+        "name": "_slot",
+        "type": "uint8"
+      }
+    ],
+    "name": "validateEquipping",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "weaponId",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "bonus1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "bonus2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "bonus3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "bonus4",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "bonusScalar1",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "bonusScalar2",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "bonusScalar3",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "bonusScalar4",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "baseDamage",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "accuracyRequirement",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "pAccuracyAtRequirement",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarStat1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarStat2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarStat3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarValue1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarValue2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarValue3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "pScalarMax1",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "pScalarMax2",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "pScalarMax3",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "uniqueSettings",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "speedModifier",
+            "type": "uint8"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct BonusInfoPhysicalAttack",
+        "name": "bonusInfoPhysicalAttack",
+        "type": "tuple"
+      }
+    ],
+    "name": "BonusInfoPhysicalAttackUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "weaponId",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "enum WeaponType",
+            "name": "weaponType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "displayId",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "rarity",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint64",
+            "name": "craftedBy",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "dye1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "dye2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "basePotency",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "focusRequirement",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "mAccuracyAtRequirement",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarStat1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarStat2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarStat3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarValue1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarValue2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarValue3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "mScalarMax1",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "mScalarMax2",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "mScalarMax3",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "restorationCount",
+            "type": "uint8"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct DisplayInfoMagicAttack",
+        "name": "displayInfoMagicAttack",
+        "type": "tuple"
+      }
+    ],
+    "name": "DisplayInfoMagicAttackUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "weaponId",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint64",
+            "name": "equippedTo",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "equippableAt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint16",
+            "name": "maxDurability",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "durability",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "maxRepairs",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "remainingRepairs",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "equipRequirement",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "enchantmentType1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "enchantmentType2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "enchantmentType3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "enchantmentScalar1",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "enchantmentScalar2",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "enchantmentScalar3",
+            "type": "uint16"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct StateEnchantments",
+        "name": "stateEnchantments",
+        "type": "tuple"
+      }
+    ],
+    "name": "StateEnchantmentsUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "weaponId",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum WeaponType",
+                "name": "weaponType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "displayId",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "rarity",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint64",
+                "name": "craftedBy",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "basePotency",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "focusRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "restorationCount",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct DisplayInfoMagicAttack",
+            "name": "displayInfoMagicAttack",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint64",
+                "name": "equippedTo",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "equippableAt",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint16",
+                "name": "maxDurability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "durability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "maxRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "remainingRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "equipRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar3",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct StateEnchantments",
+            "name": "stateEnchantments",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "bonus1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus4",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar4",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "baseDamage",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "accuracyRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "uniqueSettings",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "speedModifier",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct BonusInfoPhysicalAttack",
+            "name": "bonusInfoPhysicalAttack",
+            "type": "tuple"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct Weapon",
+        "name": "weapon",
+        "type": "tuple"
+      }
+    ],
+    "name": "WeaponCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "weaponId",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum WeaponType",
+                "name": "weaponType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "displayId",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "rarity",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint64",
+                "name": "craftedBy",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "basePotency",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "focusRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "restorationCount",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct DisplayInfoMagicAttack",
+            "name": "displayInfoMagicAttack",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint64",
+                "name": "equippedTo",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "equippableAt",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint16",
+                "name": "maxDurability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "durability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "maxRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "remainingRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "equipRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar3",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct StateEnchantments",
+            "name": "stateEnchantments",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "bonus1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus4",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar4",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "baseDamage",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "accuracyRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "uniqueSettings",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "speedModifier",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct BonusInfoPhysicalAttack",
+            "name": "bonusInfoPhysicalAttack",
+            "type": "tuple"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct Weapon",
+        "name": "weapon",
+        "type": "tuple"
+      }
+    ],
+    "name": "WeaponUpdated",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_itemType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_displayId",
+        "type": "uint16"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_rarity",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_seed",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint64",
+        "name": "_craftedBy",
+        "type": "uint64"
+      }
+    ],
+    "name": "createEquipment",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "BRIDGE_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "EQUIPMENT_MODERATOR_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "MINTER_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "MODERATOR_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "RECEIVER_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "TRANSFER_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getEquipmentBytes",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint16",
+            "name": "equipmentCore",
+            "type": "uint16"
+          },
+          {
+            "internalType": "bytes",
+            "name": "generic1",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "enchantments",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "generic3",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct EquipmentBytes",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getStateEnchantments",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint64",
+            "name": "equippedTo",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "equippableAt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint16",
+            "name": "maxDurability",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "durability",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "maxRepairs",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "remainingRepairs",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "equipRequirement",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "enchantmentType1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "enchantmentType2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "enchantmentType3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "enchantmentScalar1",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "enchantmentScalar2",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "enchantmentScalar3",
+            "type": "uint16"
+          }
+        ],
+        "internalType": "struct StateEnchantments",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "getUserWeaponIds",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "getUserWeapons",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum WeaponType",
+                "name": "weaponType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "displayId",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "rarity",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint64",
+                "name": "craftedBy",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "basePotency",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "focusRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "restorationCount",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct DisplayInfoMagicAttack",
+            "name": "displayInfoMagicAttack",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint64",
+                "name": "equippedTo",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "equippableAt",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint16",
+                "name": "maxDurability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "durability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "maxRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "remainingRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "equipRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar3",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct StateEnchantments",
+            "name": "stateEnchantments",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "bonus1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus4",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar4",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "baseDamage",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "accuracyRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "uniqueSettings",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "speedModifier",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct BonusInfoPhysicalAttack",
+            "name": "bonusInfoPhysicalAttack",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct Weapon[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getWeapon",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum WeaponType",
+                "name": "weaponType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "displayId",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "rarity",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint64",
+                "name": "craftedBy",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "basePotency",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "focusRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "restorationCount",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct DisplayInfoMagicAttack",
+            "name": "displayInfoMagicAttack",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint64",
+                "name": "equippedTo",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "equippableAt",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint16",
+                "name": "maxDurability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "durability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "maxRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "remainingRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "equipRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar3",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct StateEnchantments",
+            "name": "stateEnchantments",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "bonus1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus4",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar4",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "baseDamage",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "accuracyRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "uniqueSettings",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "speedModifier",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct BonusInfoPhysicalAttack",
+            "name": "bonusInfoPhysicalAttack",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct Weapon",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "_ids",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "getWeapons",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum WeaponType",
+                "name": "weaponType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "displayId",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "rarity",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint64",
+                "name": "craftedBy",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "basePotency",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "focusRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "restorationCount",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct DisplayInfoMagicAttack",
+            "name": "displayInfoMagicAttack",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint64",
+                "name": "equippedTo",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "equippableAt",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint16",
+                "name": "maxDurability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "durability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "maxRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "remainingRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "equipRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar3",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct StateEnchantments",
+            "name": "stateEnchantments",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "bonus1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus4",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar4",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "baseDamage",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "accuracyRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "uniqueSettings",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "speedModifier",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct BonusInfoPhysicalAttack",
+            "name": "bonusInfoPhysicalAttack",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct Weapon[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_from",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "transferWeaponOnBehalf",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "bonus1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "bonus2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "bonus3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "bonus4",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "bonusScalar1",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "bonusScalar2",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "bonusScalar3",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "bonusScalar4",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "baseDamage",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "accuracyRequirement",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "pAccuracyAtRequirement",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarStat1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarStat2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarStat3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarValue1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarValue2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "pScalarValue3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "pScalarMax1",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "pScalarMax2",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "pScalarMax3",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "uniqueSettings",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "speedModifier",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct BonusInfoPhysicalAttack",
+        "name": "_bonusInfoPhysicalAttack",
+        "type": "tuple"
+      }
+    ],
+    "name": "updateBonusInfoPhysicalAttack",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "enum WeaponType",
+            "name": "weaponType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "displayId",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "rarity",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint64",
+            "name": "craftedBy",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "dye1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "dye2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "basePotency",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "focusRequirement",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "mAccuracyAtRequirement",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarStat1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarStat2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarStat3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarValue1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarValue2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "mScalarValue3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "mScalarMax1",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "mScalarMax2",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "mScalarMax3",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "restorationCount",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct DisplayInfoMagicAttack",
+        "name": "_displayInfoMagicAttack",
+        "type": "tuple"
+      }
+    ],
+    "name": "updateDisplayInfoMagicAttack",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint16",
+            "name": "equipmentCore",
+            "type": "uint16"
+          },
+          {
+            "internalType": "bytes",
+            "name": "generic1",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "enchantments",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "generic3",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct EquipmentBytes",
+        "name": "_equipment",
+        "type": "tuple"
+      }
+    ],
+    "name": "updateEquipment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint64",
+            "name": "equippedTo",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "equippableAt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint16",
+            "name": "maxDurability",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "durability",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "maxRepairs",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "remainingRepairs",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "equipRequirement",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "enchantmentType1",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "enchantmentType2",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "enchantmentType3",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "enchantmentScalar1",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "enchantmentScalar2",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "enchantmentScalar3",
+            "type": "uint16"
+          }
+        ],
+        "internalType": "struct StateEnchantments",
+        "name": "_stateEnchantments",
+        "type": "tuple"
+      }
+    ],
+    "name": "updateStateEnchantments",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum WeaponType",
+                "name": "weaponType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "displayId",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "rarity",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint64",
+                "name": "craftedBy",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "dye2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "basePotency",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "focusRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "mScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "mScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "restorationCount",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct DisplayInfoMagicAttack",
+            "name": "displayInfoMagicAttack",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint64",
+                "name": "equippedTo",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "equippableAt",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint16",
+                "name": "maxDurability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "durability",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "maxRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "remainingRepairs",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "equipRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "enchantmentType3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "enchantmentScalar3",
+                "type": "uint16"
+              }
+            ],
+            "internalType": "struct StateEnchantments",
+            "name": "stateEnchantments",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "bonus1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "bonus4",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "bonusScalar4",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "baseDamage",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "accuracyRequirement",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pAccuracyAtRequirement",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarStat3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue1",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue2",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint8",
+                "name": "pScalarValue3",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax1",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax2",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "pScalarMax3",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint16",
+                "name": "uniqueSettings",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "speedModifier",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct BonusInfoPhysicalAttack",
+            "name": "bonusInfoPhysicalAttack",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct Weapon",
+        "name": "_weapon",
+        "type": "tuple"
+      }
+    ],
+    "name": "updateWeapon",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

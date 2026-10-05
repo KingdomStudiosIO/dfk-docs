@@ -1,0 +1,176 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --color-accent: var(--accent);
+}
+
+:root {
+  --accent: #0f8a5f;
+  --page: #ffffff;
+  --line: #e5e7eb;
+  color-scheme: light;
+}
+
+.dark {
+  --accent: #4ade9f;
+  --page: #0e1311;
+  --line: #232b27;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--page);
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+/* ---- GitBook blocks ---- */
+
+.gb-hint {
+  @apply my-5 rounded-lg border-l-4 px-4 py-1 text-[0.95em];
+  border-color: #3b82f6;
+  background: color-mix(in srgb, #3b82f6 9%, transparent);
+}
+.gb-hint-success {
+  border-color: #16a34a;
+  background: color-mix(in srgb, #16a34a 9%, transparent);
+}
+.gb-hint-warning {
+  border-color: #d97706;
+  background: color-mix(in srgb, #d97706 10%, transparent);
+}
+.gb-hint-danger {
+  border-color: #dc2626;
+  background: color-mix(in srgb, #dc2626 9%, transparent);
+}
+
+.gb-ref,
+.gb-file {
+  @apply my-3 flex items-center justify-between gap-3 rounded-lg border px-4 py-3 font-medium no-underline transition-colors;
+  border-color: var(--line);
+}
+.gb-ref:hover,
+.gb-file:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.gb-ref::after {
+  content: "→";
+}
+.gb-file {
+  @apply font-mono text-sm;
+}
+.gb-file::after {
+  content: "↓ Download";
+  @apply font-sans text-xs opacity-70;
+}
+
+.gb-cards {
+  @apply my-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
+}
+.gb-card {
+  @apply block overflow-hidden rounded-lg border transition-colors;
+  border-color: var(--line);
+}
+a.gb-card:hover {
+  border-color: var(--accent);
+}
+.gb-card img {
+  @apply aspect-video w-full object-cover;
+}
+.gb-card-body {
+  @apply space-y-1 p-4 text-sm;
+}
+.gb-card-body > div:first-child {
+  @apply text-base font-semibold;
+}
+
+.gb-tabs {
+  @apply my-5 overflow-hidden rounded-lg border;
+  border-color: var(--line);
+}
+.gb-tab {
+  @apply px-4 py-1;
+}
+/* Without JS every tab is shown, labelled; TabsEnhancer turns the labels into a tab bar. */
+.gb-tab::before {
+  content: attr(data-title);
+  @apply block pt-3 text-xs font-semibold uppercase tracking-wide opacity-70;
+}
+.gb-tabs.is-enhanced > .gb-tab::before {
+  content: none;
+}
+.gb-tabs.is-enhanced > .gb-tab:not(.is-active) {
+  display: none;
+}
+.gb-tablist {
+  @apply flex flex-wrap gap-1 border-b px-2 pt-2;
+  border-color: var(--line);
+}
+.gb-tablist button {
+  @apply rounded-t-md px-3 py-1.5 text-sm font-medium opacity-70;
+}
+.gb-tablist button[aria-selected="true"] {
+  @apply opacity-100;
+  color: var(--accent);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+.gb-code-title {
+  @apply -mb-4 rounded-t-lg bg-neutral-800 px-4 py-2 font-mono text-xs text-neutral-300;
+}
+
+.gb-embed iframe {
+  @apply my-5 aspect-video w-full rounded-lg;
+}
+
+.prose .gb-table {
+  @apply block max-w-full overflow-x-auto text-sm;
+}
+.prose .gb-table code {
+  @apply whitespace-nowrap;
+}
+
+.prose figure img {
+  @apply mx-auto rounded-md;
+}
+.prose details {
+  @apply my-4 rounded-lg border px-4 py-2;
+  border-color: var(--line);
+}
+.prose summary {
+  @apply cursor-pointer font-semibold;
+}
+
+/* ---- code highlighting (highlight.js token classes) ---- */
+.hljs-comment,
+.hljs-quote {
+  color: #8b949e;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-type {
+  color: #ff7b72;
+}
+.hljs-string,
+.hljs-attr,
+.hljs-template-string {
+  color: #a5d6ff;
+}
+.hljs-number,
+.hljs-built_in,
+.hljs-symbol {
+  color: #79c0ff;
+}
+.hljs-title,
+.hljs-function,
+.hljs-section {
+  color: #d2a8ff;
+}

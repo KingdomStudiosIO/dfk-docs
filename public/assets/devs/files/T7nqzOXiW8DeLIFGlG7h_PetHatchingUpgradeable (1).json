@@ -1,0 +1,1357 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "eggId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "petId",
+        "type": "uint256"
+      }
+    ],
+    "name": "EggCracked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "eggId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint8",
+        "name": "eggType",
+        "type": "uint8"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint8",
+        "name": "tier",
+        "type": "uint8"
+      }
+    ],
+    "name": "EggIncubated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "feeAddress",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "feePercent",
+        "type": "uint256"
+      }
+    ],
+    "name": "FeeAddressAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "source",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "timestamp",
+        "type": "uint64"
+      }
+    ],
+    "name": "FeeDeferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "source",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "timestamp",
+        "type": "uint64"
+      }
+    ],
+    "name": "FeeDisbursed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "source",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "timestamp",
+        "type": "uint64"
+      }
+    ],
+    "name": "FeeLockedBurned",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "version",
+        "type": "uint8"
+      }
+    ],
+    "name": "Initialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "Paused",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "petId",
+        "type": "uint256"
+      }
+    ],
+    "name": "PetRerollStarted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "petId",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "originId",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "uint8",
+            "name": "season",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "eggType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "rarity",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "element",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "bonusCount",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "profBonus",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "profBonusScalar",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "craftBonus",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "craftBonusScalar",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "combatBonus",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "combatBonusScalar",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "appearance",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "background",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "shiny",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint64",
+            "name": "hungryAt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "equippableAt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint256",
+            "name": "equippedTo",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct Pet",
+        "name": "petAfter",
+        "type": "tuple"
+      }
+    ],
+    "name": "PetRerolled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "previousAdminRole",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "newAdminRole",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "Unpaused",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "DEFAULT_ADMIN_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "HATCHING_MODERATOR_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "MODERATOR_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_petId",
+        "type": "uint256"
+      }
+    ],
+    "name": "completePetBonusReroll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_eggId",
+        "type": "uint256"
+      }
+    ],
+    "name": "crack",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "eggTypeCosts",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "eggAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "itemAddress1",
+        "type": "address"
+      },
+      {
+        "internalType": "uint16",
+        "name": "itemAmount1",
+        "type": "uint16"
+      },
+      {
+        "internalType": "address",
+        "name": "itemAddress2",
+        "type": "address"
+      },
+      {
+        "internalType": "uint16",
+        "name": "itemAmount2",
+        "type": "uint16"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "feeAddresses",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "feePercents",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_eggId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getEgg",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "petId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "uint8",
+            "name": "eggType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "seedblock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "finishTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "tier",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct UnhatchedEgg",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "getUserEggs",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "hasRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_eggType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_tier",
+        "type": "uint8"
+      }
+    ],
+    "name": "incubateEgg",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_eggType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_tier",
+        "type": "uint8"
+      }
+    ],
+    "name": "incubateEggWithLocked",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_petCoreAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_powerTokenAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_goldAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_gaiaTearsAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_randomGeneratorAddress",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "_petIds",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "multiCompleteBonusReroll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "_eggIds",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "multiCrack",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8[]",
+        "name": "_eggTypes",
+        "type": "uint8[]"
+      },
+      {
+        "internalType": "uint8[]",
+        "name": "_tiers",
+        "type": "uint8[]"
+      },
+      {
+        "internalType": "bool[]",
+        "name": "_useLockedTokens",
+        "type": "bool[]"
+      }
+    ],
+    "name": "multiIncubate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "_petIds",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "multiStartBonusReroll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "originId",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "paused",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "powerToken",
+    "outputs": [
+      {
+        "internalType": "contract IPowerToken",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "priceTiers",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "powerTokenCost",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint16",
+        "name": "goldCost",
+        "type": "uint16"
+      },
+      {
+        "internalType": "uint8",
+        "name": "tearCost",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint32",
+        "name": "incubationTime",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint16",
+        "name": "shinyChance",
+        "type": "uint16"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "rerollData",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "petId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "seedblock",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "needsProfReroll",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "needsCraftReroll",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "needsCombatReroll",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "season",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_eggType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_rarity",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_pool",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_startIndex",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_endIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "setAppearanceChoices",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_eggType",
+        "type": "uint8"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "eggAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "itemAddress1",
+            "type": "address"
+          },
+          {
+            "internalType": "uint16",
+            "name": "itemAmount1",
+            "type": "uint16"
+          },
+          {
+            "internalType": "address",
+            "name": "itemAddress2",
+            "type": "address"
+          },
+          {
+            "internalType": "uint16",
+            "name": "itemAmount2",
+            "type": "uint16"
+          }
+        ],
+        "internalType": "struct EggTypeCost",
+        "name": "_eggTypeCost",
+        "type": "tuple"
+      }
+    ],
+    "name": "setEggTypeCosts",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "_feeAddresses",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_feePercents",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "setFees",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_originId",
+        "type": "uint8"
+      }
+    ],
+    "name": "setOriginId",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "isActive",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "bonusType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "typeIndex",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "rarity",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "bonusId",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint32",
+            "name": "baseValue",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint32",
+            "name": "scalarMax",
+            "type": "uint32"
+          },
+          {
+            "internalType": "string",
+            "name": "bonusName",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct PetBonus",
+        "name": "_petBonus",
+        "type": "tuple"
+      }
+    ],
+    "name": "setPetBonus",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_petCoreAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setPetCore",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_priceTierIndex",
+        "type": "uint8"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "powerTokenCost",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "goldCost",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "tearCost",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint32",
+            "name": "incubationTime",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint16",
+            "name": "shinyChance",
+            "type": "uint16"
+          }
+        ],
+        "internalType": "struct PriceTier",
+        "name": "_priceTier",
+        "type": "tuple"
+      }
+    ],
+    "name": "setPriceTiers",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "_eggType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_profBonus",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_min",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_max",
+        "type": "uint256"
+      }
+    ],
+    "name": "setProfBonusRanges",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_tokenUnlockerAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setTokenUnlocker",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_petId",
+        "type": "uint256"
+      }
+    ],
+    "name": "startPetBonusReroll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalEggs",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "unpause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

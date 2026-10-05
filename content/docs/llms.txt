@@ -1,0 +1,85 @@
+# DeFi Kingdoms
+
+## DeFi Kingdoms
+
+- [DeFi Kingdoms](https://docs.defikingdoms.com/readme.md): Official DeFi Kingdoms Whitepaper, last updated August 8, 2025
+- [Realms](https://docs.defikingdoms.com/how-defi-kingdoms-works/realms.md)
+- [Ecosystem & Power Tokens](https://docs.defikingdoms.com/how-defi-kingdoms-works/power-tokens.md)
+- [JEWEL Token](https://docs.defikingdoms.com/how-defi-kingdoms-works/power-tokens/jewel-token.md)
+- [CRYSTAL Token](https://docs.defikingdoms.com/how-defi-kingdoms-works/power-tokens/crystal-token.md)
+- [JADE Token](https://docs.defikingdoms.com/how-defi-kingdoms-works/power-tokens/jade-token.md)
+- [Decentralized Exchange](https://docs.defikingdoms.com/how-defi-kingdoms-works/decentralized-exchange.md)
+- [The Jeweler](https://docs.defikingdoms.com/how-defi-kingdoms-works/the-jeweler.md)
+- [Power-Ups](https://docs.defikingdoms.com/how-defi-kingdoms-works/the-jeweler/power-ups.md)
+- [The Gardens](https://docs.defikingdoms.com/how-defi-kingdoms-works/the-gardens.md)
+- [JEWEL Gardens](https://docs.defikingdoms.com/how-defi-kingdoms-works/the-gardens/jewel-gardens.md)
+- [Ice Gardens](https://docs.defikingdoms.com/how-defi-kingdoms-works/the-gardens/ice-gardens.md): Information about the Ice Gardens and CRYSTAL issuance.
+- [JADE Gardens](https://docs.defikingdoms.com/how-defi-kingdoms-works/the-gardens/jade-gardens.md): Information about the JADE Gardens and JADE issuance.
+- [Heroes & NFTs](https://docs.defikingdoms.com/how-defi-kingdoms-works/the-heroes.md): An overview of the various NFTs used in DeFi Kingdoms
+- [DeFi Kingdoms Blockchain](https://docs.defikingdoms.com/how-defi-kingdoms-works/defi-kingdoms-blockchain.md): Information about DFK Chain, an Avalanche Subnet
+- [Roadmap](https://docs.defikingdoms.com/roadmap.md)
+- [Getting Started](https://docs.defikingdoms.com/gameplay/getting-started.md)
+- [Heroes](https://docs.defikingdoms.com/gameplay/heroes.md)
+- [Stats](https://docs.defikingdoms.com/gameplay/heroes/stats.md)
+- [Rarity](https://docs.defikingdoms.com/gameplay/heroes/rarity.md)
+- [Summoning](https://docs.defikingdoms.com/gameplay/heroes/summoning.md)
+- [Dark Summoning](https://docs.defikingdoms.com/gameplay/heroes/summoning/dark-summoning.md): Dark Summoning allows players to sacrifice two Heroes in order to summon a new one.
+- [Leveling](https://docs.defikingdoms.com/gameplay/heroes/leveling.md)
+- [Quests](https://docs.defikingdoms.com/gameplay/quests.md)
+- [Profession Quests](https://docs.defikingdoms.com/gameplay/quests/professions.md)
+- [Fishing](https://docs.defikingdoms.com/gameplay/quests/professions/fishing.md): Information about Fishing Quests
+- [Foraging](https://docs.defikingdoms.com/gameplay/quests/professions/foraging.md): Information about Foraging Quests
+- [Gardening](https://docs.defikingdoms.com/gameplay/quests/professions/gardening.md): Information about Gardening Quests
+- [Gold Mining](https://docs.defikingdoms.com/gameplay/quests/professions/gold-mining.md): Information about Gold Mining Quests
+- [Token Mining](https://docs.defikingdoms.com/gameplay/quests/professions/token-mining.md): Information about Token Mining Quests
+- [Training Quests](https://docs.defikingdoms.com/gameplay/quests/training-quests.md)
+- [Void Hunt: Mad Boar](https://docs.defikingdoms.com/gameplay/void-hunt-mad-boar.md)
+- [Status Effects & Mechanics Glossary](https://docs.defikingdoms.com/gameplay/void-hunt-mad-boar/status-effects-and-mechanics-glossary.md)
+- [Items](https://docs.defikingdoms.com/gameplay/items.md)
+- [Attunement Crystals](https://docs.defikingdoms.com/gameplay/items/attunement-crystals.md)
+- [Atonement Crystals](https://docs.defikingdoms.com/gameplay/items/attunement-crystals/atonement-crystals.md): A one-stop shop for info on Atonement Crystals
+- [Enhancement Stones](https://docs.defikingdoms.com/gameplay/items/enhancement-stones.md)
+- [Locations](https://docs.defikingdoms.com/gameplay/locations.md)
+- [Jeweler](https://docs.defikingdoms.com/gameplay/locations/jeweler.md)
+- [Marketplace](https://docs.defikingdoms.com/gameplay/locations/marketplace.md)
+- [Portal](https://docs.defikingdoms.com/gameplay/locations/portal.md)
+- [Tavern](https://docs.defikingdoms.com/gameplay/locations/tavern.md)
+- [Pets](https://docs.defikingdoms.com/gameplay/pets.md)
+- [Events](https://docs.defikingdoms.com/gameplay/events.md)
+- [The Perilous Journey](https://docs.defikingdoms.com/gameplay/events/the-perilous-journey.md): All about the Perilous Journey
+- [Adelyn's Reawakening](https://docs.defikingdoms.com/gameplay/events/gen0-reroll.md): All about Gen0 Gene Rerolling
+- [Combat](https://docs.defikingdoms.com/gameplay/combat.md): Details about the DeFi Kingdoms Hero Combat System
+- [Archer](https://docs.defikingdoms.com/gameplay/combat/archer.md): Archer Class Combat Skills
+- [Berserker](https://docs.defikingdoms.com/gameplay/combat/berserker.md): Berserker Class Combat Skills
+- [Knight](https://docs.defikingdoms.com/gameplay/combat/knight.md): Knight Class Combat Skills
+- [Legionnaire](https://docs.defikingdoms.com/gameplay/combat/legionnaire.md): Legionnaire Class Combat Skills
+- [Monk](https://docs.defikingdoms.com/gameplay/combat/monk.md): Monk Class Combat Skills
+- [Pirate](https://docs.defikingdoms.com/gameplay/combat/pirate.md): Pirate Class Combat Skills
+- [Priest](https://docs.defikingdoms.com/gameplay/combat/priest.md): Priest Class Combat Skills
+- [Scholar](https://docs.defikingdoms.com/gameplay/combat/scholar.md): Scholar Class Combat Skills
+- [Shapeshifter](https://docs.defikingdoms.com/gameplay/combat/shapeshifter.md): Shapeshifter Class Combat Skills
+- [Summoner](https://docs.defikingdoms.com/gameplay/combat/summoner.md): Summoner Class Combat Skills
+- [Seer](https://docs.defikingdoms.com/gameplay/combat/seer.md): Seer Class Combat Skills
+- [Thief](https://docs.defikingdoms.com/gameplay/combat/thief.md): Thief Class Combat Skills
+- [Warrior](https://docs.defikingdoms.com/gameplay/combat/warrior.md): Warrior Class Combat Skills
+- [Wizard](https://docs.defikingdoms.com/gameplay/combat/wizard.md): Wizard Class Combat Skills
+- [Lore](https://docs.defikingdoms.com/gameplay/lore.md): The lore of DeFi Kingdoms
+- [Audit Results](https://docs.defikingdoms.com/important/audit-results.md): A smart contract audit is an extensive methodical examination and analysis of a smart contract's code that is used to interact with a cryptocurrency or blockchain, discover errors, and suggest fixes.
+- [Disclaimer](https://docs.defikingdoms.com/important/dyor-disclaimer.md): All investing comes with risk. It's important to do your own research.
+- [Credits](https://docs.defikingdoms.com/important/credits.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.defikingdoms.com/readme.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

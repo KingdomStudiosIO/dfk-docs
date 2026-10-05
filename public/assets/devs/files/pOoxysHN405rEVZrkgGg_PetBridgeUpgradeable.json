@@ -1,0 +1,1026 @@
+[
+  {
+    "inputs": [],
+    "name": "UintUtils__InsufficientHexLength",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "equipmentId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint16",
+        "name": "equipmentType",
+        "type": "uint16"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "arrivalChainId",
+        "type": "uint256"
+      }
+    ],
+    "name": "EquipmentArrived",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "equipmentId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint16",
+        "name": "equipmentType",
+        "type": "uint16"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "arrivalChainId",
+        "type": "uint256"
+      }
+    ],
+    "name": "EquipmentSent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "petId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "arrivalChainId",
+        "type": "uint256"
+      }
+    ],
+    "name": "PetArrived",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "petId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "arrivalChainId",
+        "type": "uint256"
+      }
+    ],
+    "name": "PetSent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "previousAdminRole",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "newAdminRole",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "_srcChainId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "_srcAddress",
+        "type": "bytes32"
+      }
+    ],
+    "name": "SetTrustedRemote",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "MODERATOR_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "equippedSlots",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "petId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "weapon1Id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "weapon2Id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "offhand1Id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "offhand2Id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "armorId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "accessoryId",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct HeroEquipment",
+        "name": "_heroEquipment",
+        "type": "tuple"
+      }
+    ],
+    "name": "buildEquipmentBytes",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum HeroEquipmentSlot",
+            "name": "slot",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16",
+                "name": "equipmentCore",
+                "type": "uint16"
+              },
+              {
+                "internalType": "bytes",
+                "name": "generic1",
+                "type": "bytes"
+              },
+              {
+                "internalType": "bytes",
+                "name": "enchantments",
+                "type": "bytes"
+              },
+              {
+                "internalType": "bytes",
+                "name": "generic3",
+                "type": "bytes"
+              }
+            ],
+            "internalType": "struct EquipmentBytes",
+            "name": "equipment",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct EquipmentSlotBytes[6]",
+        "name": "",
+        "type": "tuple[6]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint16",
+            "name": "equipmentCore",
+            "type": "uint16"
+          },
+          {
+            "internalType": "bytes",
+            "name": "generic1",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "enchantments",
+            "type": "bytes"
+          },
+          {
+            "internalType": "bytes",
+            "name": "generic3",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct EquipmentBytes",
+        "name": "_equipment",
+        "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "_receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_equipmentId",
+        "type": "uint256"
+      }
+    ],
+    "name": "doEquipmentBridge",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "originId",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "uint8",
+            "name": "season",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "eggType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "rarity",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "element",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "bonusCount",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "profBonus",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "profBonusScalar",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "craftBonus",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "craftBonusScalar",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "combatBonus",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "combatBonusScalar",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint16",
+            "name": "appearance",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "background",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "shiny",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint64",
+            "name": "hungryAt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "equippableAt",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint256",
+            "name": "equippedTo",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "fedBy",
+            "type": "address"
+          },
+          {
+            "internalType": "enum PetFoodType",
+            "name": "foodType",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct PetV2",
+        "name": "_pet",
+        "type": "tuple"
+      },
+      {
+        "internalType": "address",
+        "name": "_receiver",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_petId",
+        "type": "uint256"
+      }
+    ],
+    "name": "doPetBridge",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint16",
+        "name": "",
+        "type": "uint16"
+      }
+    ],
+    "name": "equipmentTypes",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_srcAddress",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_srcChainId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "_message",
+        "type": "bytes"
+      },
+      {
+        "internalType": "address",
+        "name": "_executor",
+        "type": "address"
+      }
+    ],
+    "name": "executeMessage",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_chainId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getTrustedRemote",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "trustedRemote",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "hasRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "heroBridgeAddress",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_messageBus",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "messageBus",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "msgGasLimit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pets",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_petId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_dstChainId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_recipient",
+        "type": "address"
+      }
+    ],
+    "name": "resendPet",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "equippedSlots",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "petId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "weapon1Id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "weapon2Id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "offhand1Id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "offhand2Id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "armorId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "accessoryId",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct HeroEquipment",
+        "name": "_heroEquipment",
+        "type": "tuple"
+      }
+    ],
+    "name": "sendAllEquipment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_equipmentId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_equipmentCore",
+        "type": "uint16"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_dstChainId",
+        "type": "uint256"
+      }
+    ],
+    "name": "sendEquipment",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_petId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_dstChainId",
+        "type": "uint256"
+      }
+    ],
+    "name": "sendPet",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_admin",
+        "type": "address"
+      }
+    ],
+    "name": "setAdminRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint16",
+        "name": "_equipmentType",
+        "type": "uint16"
+      },
+      {
+        "internalType": "address",
+        "name": "_equipmentCoreAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setEquipmentType",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_heroBridgeAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setHeroBridgeAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_messageBus",
+        "type": "address"
+      }
+    ],
+    "name": "setMessageBus",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_msgGasLimit",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMsgGasLimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_petCoreAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setPetCoreAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_srcChainId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_srcAddress",
+        "type": "bytes32"
+      }
+    ],
+    "name": "setTrustedRemote",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "_message",
+        "type": "bytes"
+      }
+    ],
+    "name": "tryHandleEquipmentBridged",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "_message",
+        "type": "bytes"
+      }
+    ],
+    "name": "tryHandlePetBridgedOld",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "_message",
+        "type": "bytes"
+      }
+    ],
+    "name": "tryHandlePetBridgedV3",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
